@@ -1,0 +1,124 @@
+body{
+    background:whitesmoke;
+    font-family:'Trebuchet MS';
+    font-size:25px;
+    margin:0;
+    padding: 0;
+}
+
+.rectangle{
+    width:16rem;
+    height:34rem;
+    margin:8vh auto 0;
+    background:white;
+    border-radius:5px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows:30px 60px 50px auto auto;
+    box-shadow:0px 0px 15px 0px grey;
+    padding:0 3% 3%;
+}
+
+.top-bar{
+    grid-column:1/-1;
+    border-radius:5px 5px 0 0;
+}
+
+.top-bar img {
+    width:auto;
+    height:auto;
+    max-width:14px;
+    max-height:14px;
+    margin: 10px 0px;
+}
+
+.top-bar img:nth-child(1){
+    margin-left:-10px;
+}
+@media screen and (max-width:600px){
+.rectangle{
+    width:16rem;
+}
+.top-bar img:nth-child(1){
+    margin-left:-3px;
+}
+}
+.answer-area{
+    grid-column:1/-1;
+    text-align-last: right;
+    margin:auto 2px 0 0;
+    font-size:46px;
+    color:black;
+    letter-spacing:8px;
+}
+
+.work-area{
+    grid-column:1/-1;
+    text-align-last: right;
+    margin:auto 15px 0 0;
+    font-size:14px;
+    font-weight:600;
+    color:#ada4a2;
+    letter-spacing:1;
+}
+
+.power-symbol{
+    grid-column:1/4;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    
+}
+.power-symbol div:nth-child(2){
+    font-weight:900;
+}
+.power-symbol div>p{
+    text-align: center;
+}
+.arithmetic-sign{
+    grid-column:4/-1;
+    grid-row:4/6;
+    border-radius:0 0 5px;
+    display:grid;
+    color:#3d3dda;
+}
+.arithmetic-sign div >p{
+   text-align: center;
+}
+
+.numbers{
+    grid-column:1/4;
+    border-radius:0 0 0 5px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    color:#242121;
+}
+.numbers div >p{
+    text-align: center;
+}
+
+.span{
+    grid-column:span 2;
+}
+.span p{
+    margin-left:50%;
+}
+.other-calculators{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:20px auto;
+    width:80%;
+    justify-content: space-between;
+}
+
+.other-calculators div>a{
+    text-decoration:none;
+    color:#3d3dda;
+}
+
+@media screen and (max-width:640px){
+.other-calculators{
+    flex-direction:column;
+    align-items:center;
+}
+}
